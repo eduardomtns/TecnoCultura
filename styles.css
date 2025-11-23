@@ -200,6 +200,17 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
+.ar-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(102, 126, 234, 0.3);
+    z-index: 1;
+}
+
 .ar-marker {
     position: absolute;
     width: 200px;
@@ -207,12 +218,15 @@ body {
     border: 4px dashed rgba(255,255,255,0.5);
     border-radius: 20px;
     animation: pulse 2s infinite;
+    z-index: 2;
 }
 
 .ar-element {
     position: absolute;
     font-size: 3rem;
     animation: float 3s ease-in-out infinite;
+    z-index: 3;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
 }
 
 .ar-element.delay-1 {
@@ -225,6 +239,11 @@ body {
     animation-delay: 1s;
     bottom: 20%;
     right: 20%;
+}
+
+.ar-content {
+    position: relative;
+    z-index: 3;
 }
 
 .floating {
@@ -371,6 +390,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+
+.trilha-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1));
+    z-index: 1;
 }
 
 .ar-overlay {
@@ -383,6 +414,7 @@ body {
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
+    z-index: 2;
 }
 
 .trilha-content {
@@ -515,7 +547,7 @@ body {
 
 .stat-label {
     font-size: 0.85rem;
-    color: var(--text-light);
+    color: white;
 }
 
 .stat-value {
@@ -591,7 +623,8 @@ body {
 
 .stat-label {
     font-size: 1rem;
-    opacity: 0.9;
+    opacity: 1;
+    font-weight: 500;
 }
 
 .subsection-title {
