@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoCultura - Preservação Cultural e Sustentabilidade</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🎮</span>
+                <span class="logo-text">TecnoCultura</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Início</a></li>
+                <li><a href="#trilhas" class="nav-link">Trilhas</a></li>
+                <li><a href="#jogos" class="nav-link">Jogos</a></li>
+                <li><a href="#comunidade" class="nav-link">Comunidade</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Tela Home -->
+    <section id="home" class="screen active">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">TecnoCultura</span>
+                    <br>Preservando Cultura, Transformando Comunidades
+                </h1>
+                <p class="hero-subtitle">
+                    Explore trilhas culturais em Realidade Aumentada, participe de jogos educativos 
+                    e descubra histórias ancestrais enquanto promove a sustentabilidade.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="showScreen('trilhas')">
+                        🗺️ Explorar Trilhas
+                    </button>
+                    <button class="btn btn-secondary" onclick="showScreen('jogos')">
+                        🎯 Começar Jogo
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="ar-preview">
+                    <div class="ar-marker"></div>
+                    <div class="ar-content">
+                        <div class="ar-element floating">🎭</div>
+                        <div class="ar-element floating delay-1">🌿</div>
+                        <div class="ar-element floating delay-2">🎨</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-section">
+            <h2 class="section-title">Como Funciona</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Realidade Aumentada</h3>
+                    <p>Visualize elementos culturais 3D em locais reais usando seu celular</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Gamificação</h3>
+                    <p>Desafios interativos sobre sustentabilidade e preservação cultural</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Comunidades</h3>
+                    <p>Conecte-se com povos tradicionais e descubra suas histórias</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">♻️</div>
+                    <h3>Sustentabilidade</h3>
+                    <p>Aprenda sobre práticas ambientais através de experiências imersivas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tela Trilhas -->
+    <section id="trilhas" class="screen">
+        <div class="screen-header">
+            <h2 class="screen-title">🗺️ Trilhas Culturais</h2>
+            <p class="screen-subtitle">Explore territórios e descubra histórias ancestrais</p>
+        </div>
+
+        <div class="trilhas-container">
+            <div class="trilha-card featured">
+                <div class="trilha-badge">⭐ Em Destaque</div>
+                <div class="trilha-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="ar-overlay">AR</div>
+                </div>
+                <div class="trilha-content">
+                    <h3>Trilha Quilombola - Memórias Ancestrais</h3>
+                    <p class="trilha-location">📍 Comunidade Quilombola do Vale</p>
+                    <p class="trilha-description">
+                        Descubra a história de resistência e cultura afro-brasileira através de 
+                        elementos 3D, depoimentos reais e minijogos sobre tradições ancestrais.
+                    </p>
+                    <div class="trilha-stats">
+                        <span class="stat">🎯 5 Desafios</span>
+                        <span class="stat">📚 8 Histórias</span>
+                        <span class="stat">⏱️ 45 min</span>
+                    </div>
+                    <button class="btn btn-primary btn-block" onclick="startTrilha(1)">
+                        🚀 Iniciar Trilha
+                    </button>
+                </div>
+            </div>
+
+            <div class="trilha-card">
+                <div class="trilha-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="ar-overlay">AR</div>
+                </div>
+                <div class="trilha-content">
+                    <h3>Trilha Indígena - Saberes da Floresta</h3>
+                    <p class="trilha-location">📍 Aldeia Tupinambá</p>
+                    <p class="trilha-description">
+                        Aprenda sobre medicina tradicional, biodiversidade e práticas sustentáveis 
+                        através de experiências em realidade aumentada.
+                    </p>
+                    <div class="trilha-stats">
+                        <span class="stat">🎯 7 Desafios</span>
+                        <span class="stat">📚 12 Histórias</span>
+                        <span class="stat">⏱️ 60 min</span>
+                    </div>
+                    <button class="btn btn-secondary btn-block" onclick="startTrilha(2)">
+                        🚀 Iniciar Trilha
+                    </button>
+                </div>
+            </div>
+
+            <div class="trilha-card">
+                <div class="trilha-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <div class="ar-overlay">AR</div>
+                </div>
+                <div class="trilha-content">
+                    <h3>Trilha Ribeirinha - Águas e Memórias</h3>
+                    <p class="trilha-location">📍 Comunidade do Rio Amazonas</p>
+                    <p class="trilha-description">
+                        Explore a relação entre comunidades ribeirinhas e o meio ambiente, 
+                        com desafios sobre preservação dos rios e sustentabilidade.
+                    </p>
+                    <div class="trilha-stats">
+                        <span class="stat">🎯 6 Desafios</span>
+                        <span class="stat">📚 10 Histórias</span>
+                        <span class="stat">⏱️ 50 min</span>
+                    </div>
+                    <button class="btn btn-secondary btn-block" onclick="startTrilha(3)">
+                        🚀 Iniciar Trilha
+                    </button>
+                </div>
+            </div>
+
+            <div class="trilha-card">
+                <div class="trilha-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                    <div class="ar-overlay">AR</div>
+                </div>
+                <div class="trilha-content">
+                    <h3>Trilha Urbana - Periferia Criativa</h3>
+                    <p class="trilha-location">📍 Favela da Maré</p>
+                    <p class="trilha-description">
+                        Descubra a riqueza cultural das periferias urbanas, com arte, música 
+                        e iniciativas de sustentabilidade comunitária.
+                    </p>
+                    <div class="trilha-stats">
+                        <span class="stat">🎯 4 Desafios</span>
+                        <span class="stat">📚 6 Histórias</span>
+                        <span class="stat">⏱️ 35 min</span>
+                    </div>
+                    <button class="btn btn-secondary btn-block" onclick="startTrilha(4)">
+                        🚀 Iniciar Trilha
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tela Jogos -->
+    <section id="jogos" class="screen">
+        <div class="screen-header">
+            <h2 class="screen-title">🎮 Jogos e Desafios</h2>
+            <p class="screen-subtitle">Aprenda sobre sustentabilidade de forma divertida</p>
+        </div>
+
+        <div class="jogos-container">
+            <div class="jogo-card active-game">
+                <div class="jogo-header">
+                    <div class="jogo-icon">🌊</div>
+                    <div class="jogo-info">
+                        <h3>Limpeza Virtual do Rio</h3>
+                        <p class="jogo-category">Sustentabilidade Ambiental</p>
+                    </div>
+                </div>
+                <div class="jogo-preview">
+                    <div class="game-area">
+                        <div class="river-scene">
+                            <div class="trash-item" style="left: 20%; top: 30%;">🥤</div>
+                            <div class="trash-item" style="left: 60%; top: 50%;">📦</div>
+                            <div class="trash-item" style="left: 80%; top: 20%;">🗑️</div>
+                            <div class="fish">🐟</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="jogo-description">
+                    Use a Realidade Aumentada para "limpar" virtualmente um rio e entenda 
+                    os impactos reais do lixo nos ecossistemas aquáticos.
+                </p>
+                <div class="jogo-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Nível</span>
+                        <span class="stat-value">Iniciante</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Pontos</span>
+                        <span class="stat-value">0/1000</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-block" onclick="startGame('rio')">
+                    ▶️ Jogar Agora
+                </button>
+            </div>
+
+            <div class="jogos-grid">
+                <div class="jogo-mini-card">
+                    <div class="mini-icon">🌳</div>
+                    <h4>Refloresta AR</h4>
+                    <p>Plante árvores virtuais e veja o impacto no ambiente</p>
+                    <button class="btn btn-small" onclick="startGame('refloresta')">Jogar</button>
+                </div>
+
+                <div class="jogo-mini-card">
+                    <div class="mini-icon">♻️</div>
+                    <h4>Reciclagem Master</h4>
+                    <p>Separe corretamente os resíduos e ganhe pontos</p>
+                    <button class="btn btn-small" onclick="startGame('reciclagem')">Jogar</button>
+                </div>
+
+                <div class="jogo-mini-card">
+                    <div class="mini-icon">🎭</div>
+                    <h4>Memória Cultural</h4>
+                    <p>Combine elementos culturais e aprenda tradições</p>
+                    <button class="btn btn-small" onclick="startGame('memoria')">Jogar</button>
+                </div>
+
+                <div class="jogo-mini-card">
+                    <div class="mini-icon">🍃</div>
+                    <h4>Biodiversidade Quest</h4>
+                    <p>Explore espécies nativas e seus habitats</p>
+                    <button class="btn btn-small" onclick="startGame('biodiversidade')">Jogar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tela Comunidade -->
+    <section id="comunidade" class="screen">
+        <div class="screen-header">
+            <h2 class="screen-title">🤝 Comunidade</h2>
+            <p class="screen-subtitle">Conecte-se com criadores e comunidades</p>
+        </div>
+
+        <div class="comunidade-container">
+            <div class="comunidade-stats">
+                <div class="stat-card">
+                    <div class="stat-number">1,234</div>
+                    <div class="stat-label">Usuários Ativos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">48</div>
+                    <div class="stat-label">Comunidades</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">156</div>
+                    <div class="stat-label">Histórias Criadas</div>
+                </div>
+            </div>
+
+            <div class="criadores-section">
+                <h3 class="subsection-title">✨ Criadores em Destaque</h3>
+                <div class="criadores-grid">
+                    <div class="criador-card">
+                        <div class="criador-avatar">👨‍🎨</div>
+                        <h4>João Silva</h4>
+                        <p class="criador-role">Designer & Artista Local</p>
+                        <p class="criador-bio">
+                            Criador de 12 trilhas culturais, especialista em arte quilombola
+                        </p>
+                        <div class="criador-stats">
+                            <span>⭐ 4.9</span>
+                            <span>📚 12 Trilhas</span>
+                        </div>
+                    </div>
+
+                    <div class="criador-card">
+                        <div class="criador-avatar">👩‍💻</div>
+                        <h4>Maria Santos</h4>
+                        <p class="criador-role">Educadora & Narradora</p>
+                        <p class="criador-bio">
+                            Contadora de histórias indígenas, criadora de conteúdo educativo
+                        </p>
+                        <div class="criador-stats">
+                            <span>⭐ 5.0</span>
+                            <span>📚 8 Trilhas</span>
+                        </div>
+                    </div>
+
+                    <div class="criador-card">
+                        <div class="criador-avatar">🎮</div>
+                        <h4>Carlos Oliveira</h4>
+                        <p class="criador-role">Game Designer</p>
+                        <p class="criador-bio">
+                            Desenvolvedor de jogos educativos sobre sustentabilidade
+                        </p>
+                        <div class="criador-stats">
+                            <span>⭐ 4.8</span>
+                            <span>🎯 15 Jogos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="impacto-section">
+                <h3 class="subsection-title">📊 Impacto Social</h3>
+                <div class="impacto-grid">
+                    <div class="impacto-card">
+                        <div class="impacto-icon">💼</div>
+                        <h4>Geração de Renda</h4>
+                        <p>R$ 45.000+ pagos a criadores de conteúdo em 2024</p>
+                    </div>
+                    <div class="impacto-card">
+                        <div class="impacto-icon">🎓</div>
+                        <h4>Educação</h4>
+                        <p>2.500+ estudantes utilizando a plataforma</p>
+                    </div>
+                    <div class="impacto-card">
+                        <div class="impacto-icon">🌱</div>
+                        <h4>Sustentabilidade</h4>
+                        <p>150+ ações ambientais realizadas pelas comunidades</p>
+                    </div>
+                    <div class="impacto-card">
+                        <div class="impacto-icon">🏆</div>
+                        <h4>Reconhecimento</h4>
+                        <p>Premiada como melhor iniciativa de impacto social 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tela Sobre -->
+    <section id="sobre" class="screen">
+        <div class="screen-header">
+            <h2 class="screen-title">ℹ️ Sobre a Plataforma</h2>
+            <p class="screen-subtitle">Conheça nossa missão e valores</p>
+        </div>
+
+        <div class="sobre-container">
+            <div class="missao-section">
+                <h3 class="subsection-title">🎯 Nossa Missão</h3>
+                <p class="missao-text">
+                    A TecnoCultura nasce com o propósito de unir tecnologia, cultura e sustentabilidade 
+                    para preservar memórias ancestrais, empoderar comunidades e promover o desenvolvimento 
+                    sustentável através de experiências imersivas e educativas.
+                </p>
+            </div>
+
+            <div class="valores-section">
+                <h3 class="subsection-title">💎 Nossos Valores</h3>
+                <div class="valores-grid">
+                    <div class="valor-card">
+                        <div class="valor-icon">🤝</div>
+                        <h4>Inclusão</h4>
+                        <p>Valorizamos a diversidade e promovemos a igualdade</p>
+                    </div>
+                    <div class="valor-card">
+                        <div class="valor-icon">🌍</div>
+                        <h4>Sustentabilidade</h4>
+                        <p>Compromisso com o meio ambiente e comunidades</p>
+                    </div>
+                    <div class="valor-card">
+                        <div class="valor-icon">🎨</div>
+                        <h4>Criatividade</h4>
+                        <p>Inovação através da economia criativa</p>
+                    </div>
+                    <div class="valor-card">
+                        <div class="valor-icon">💚</div>
+                        <h4>Impacto Social</h4>
+                        <p>Transformação positiva na sociedade</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ods-section">
+                <h3 class="subsection-title">🌐 Objetivos de Desenvolvimento Sustentável (ODS)</h3>
+                <p class="ods-intro">
+                    A TecnoCultura contribui diretamente para o alcance dos seguintes ODS:
+                </p>
+                <div class="ods-grid">
+                    <div class="ods-card">
+                        <div class="ods-number">4</div>
+                        <h4>Educação de Qualidade</h4>
+                        <p>Gamificação e AR para aprendizagem inovadora</p>
+                    </div>
+                    <div class="ods-card">
+                        <div class="ods-number">8</div>
+                        <h4>Trabalho Decente</h4>
+                        <p>Geração de renda para criadores e artistas</p>
+                    </div>
+                    <div class="ods-card">
+                        <div class="ods-number">10</div>
+                        <h4>Redução de Desigualdades</h4>
+                        <p>Valorização de comunidades historicamente invisibilizadas</p>
+                    </div>
+                    <div class="ods-card">
+                        <div class="ods-number">11</div>
+                        <h4>Cidades Sustentáveis</h4>
+                        <p>Turismo cultural de baixo impacto</p>
+                    </div>
+                    <div class="ods-card">
+                        <div class="ods-number">12</div>
+                        <h4>Consumo Responsável</h4>
+                        <p>Conscientização sobre práticas sustentáveis</p>
+                    </div>
+                    <div class="ods-card">
+                        <div class="ods-number">15</div>
+                        <h4>Vida Terrestre</h4>
+                        <p>Preservação da biodiversidade e ecossistemas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tecnologia-section">
+                <h3 class="subsection-title">🔧 Tecnologias Utilizadas</h3>
+                <div class="tech-badges">
+                    <span class="tech-badge">Realidade Aumentada (AR)</span>
+                    <span class="tech-badge">Gamificação</span>
+                    <span class="tech-badge">Mobile First</span>
+                    <span class="tech-badge">Geolocalização</span>
+                    <span class="tech-badge">3D Interativo</span>
+                    <span class="tech-badge">Narrativas Imersivas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Jogo -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="gameContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
